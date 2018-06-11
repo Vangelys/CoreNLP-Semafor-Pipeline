@@ -25,9 +25,38 @@ set -e # fail fast
 MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 source "${MY_DIR}/config.sh"
 
-if [ $# -lt 2 -o $# -gt 3 ]; then
-   echo "USAGE: `basename "${0}"` <input-file> <output-file> <num-threads>"
-   exit 1
+if [ $4 != "a" ] && [ $4 != "c" ] && [ $4 != "e" ] && [ $4 != "f" ] && [ $4 != "g" ] && [ $4 != "s" ] || [ -z $4 ] || [ $# -lt 2 -o $# -gt 3 ]
+then
+	echo "USAGE: `basename "${0}"` <input-file> <output-file> <num-threads> <language"
+	echo "language = [a=arabic] [c=chinese] [e=english] [f=french] [g=german] [s=spanish]"
+	exit 1
+else
+	case $1 in
+		"a")
+			echo "chosen language = arabic"
+			LANG="arabic"
+			;;
+		"c")
+			echo "chosen language = chinese"
+			LANG="chinese"
+			;;
+		"e")
+			echo "chosen language = english"
+			LANG="english"
+			;;
+		"f")
+			echo "chosen language = french"
+			LANG="french"
+			;;
+		"g")
+			echo "chosen language = german"
+			LANG="german"
+			;;
+		"s")
+			echo "chosen langage = spanish"
+			LANG="spanish"
+			;;
+	esac
 fi
 
 # location of input file. must be absolute path
@@ -46,7 +75,7 @@ echo "TEMP_DIR: ${TEMP_DIR}"
 DEPENDENCY_PARSED_FILE="${TEMP_DIR}/conll/${INPUT_FILE}.conllu"
 #DEPENDENCY_PARSED_FILE="${TEMP_DIR}/dependencies.conll"
 
-bash ${MY_DIR}/runCoreNLP.sh ${INPUT_FILE} ${TEMP_DIR}
+bash ${MY_DIR}/runCoreNLP.sh ${INPUT_FILE} ${TEMP_DIR} ${LANG}
 
 
 

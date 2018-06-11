@@ -1,17 +1,17 @@
-#Stage Guilherme RAZET : Pipeline parser-Semafor
+# Stage Guilherme RAZET : Pipeline parser-Semafor
 
-#Méthode de création du package
+# Méthode de création du package
 
-##Installation Semafor
+## Installation Semafor
 
-###SITES UTILES
+### SITES UTILES
 
 [Github :](https://github.com/Noahs-ARK/semafor)
 
 [Outils pour les formats](https://github.com/UniversalDependencies/tools)
 
 ----------------------------------------------------------------
-###INSTALLATION
+### INSTALLATION
 
 Semafor n'est plus maintenu depuis 2012, il reste néanmoins la solution la plus efficace en termes de résultats. L'installation peut se montrer laborieuse :
 
@@ -28,7 +28,7 @@ Semafor n'est plus maintenu depuis 2012, il reste néanmoins la solution la plus
 2. sinon, une solution consiste à installer toutes les dépendances à la main, depuis le dépôt de [maven](https://repo.maven.apache.org/maven2/). Quand c'est fait, relancer la commande de maven (cf annexe 1)
 
 ----------------------------------------------------------------
-###UTILISATION
+### UTILISATION
 
 SEMAFOR nécessite un fichier CONLLU en entrée (pour la conversion des formats, voir SITES UTILES). Il est possible de le coupler avec un parser produisant ce type de fichier, ici le StanfordCoreNLP. Son utilisation se fait via un script, présent dans le dossier bin de Semafor.
 
@@ -41,14 +41,14 @@ La commande pour lancer le script (se placer dans le dossier Semafor): `.bin/run
 3. le nombre de threads utilisés influe sur la vitesse de traitement, il est recommandé de mettre au moins 2
 
 ----------------------------------------------------------------
-##Installation StanfordCoreNLP
+## Installation StanfordCoreNLP
 
-###SITES UTILES :
+### SITES UTILES :
 
 [Documentation officielle](https://stanfordnlp.github.io/CoreNLP/index.html)
 
 ----------------------------------------------------------------
-###INSTALLATION :
+### INSTALLATION :
 
 le parser est disponible sous 2 formes : soit au sein de StanfordCoreNLP, soit en temps que StanfordParser. Je privilégie pour l'instant le StanfordCoreNLP, car il est plus complet en termes de fonctionnalités proposées.
 
@@ -63,7 +63,7 @@ le parser est disponible sous 2 formes : soit au sein de StanfordCoreNLP, soit e
 StanfordCoreNLP est prêt à être utilisé.
 
 ----------------------------------------------------------------
-###UTILISATION :
+### UTILISATION :
 
 Pour utiliser StanfordCoreNLP, il y a 2 méthodes : soit on se sert des lignes de commandes, soit on utilise les scripts. Voici un exemple de commande "basique" :
 
@@ -93,12 +93,12 @@ je vais ici détailler tous les éléments de la commande :
 7. -file test1.txt : chemin du fichier à traiter
 
 ----------------------------------------------------------------
-###LISTE DES COMMANDES :
+### LISTE DES COMMANDES :
 
 [Documentation](https://stanfordnlp.github.io/CoreNLP/cmdline.html)
 
 ----------------------------------------------------------------
-##Utilisation du Pipeline
+## Utilisation du Pipeline
 
 1. installer les deux outils (cf installation)
 
@@ -109,7 +109,7 @@ je vais ici détailler tous les éléments de la commande :
 exemple de commande : `./bin/runSemafor.sh 10par.txt /home/guilherme/git_repository/semafor/10par.out.xml 2`
 
 ----------------------------------------------------------------
-##Annexe 1 : Installation des dépendances de maven
+## Annexe 1 : Installation des dépendances de maven
 
 Voici la liste des instructions à répéter tant que le projet ne compile pas correctement :
 
@@ -129,4 +129,4 @@ Voici la liste des instructions à répéter tant que le projet ne compile pas c
 
 Si elle n'y est pas, il faut copier cette syntaxe et la placer entre les balises `<dependencies>`
 
-#Installation depuis le dépôt GitHub# CoreNLP-Semafor-Pipeline
+# Installation depuis le dépôt GitHub# CoreNLP-Semafor-Pipeline
