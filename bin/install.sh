@@ -42,9 +42,9 @@ source "${MY_DIR}/config.sh"
 
 
 
-sudo apt install wget
-sudo apt install maven
-sudo apt install tar
+sudo apt -y install wget
+sudo apt -y install maven
+sudo apt -y install tar
 
 mvn package
 

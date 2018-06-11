@@ -13,7 +13,7 @@
             <id>repo</id>
             <url>file://${project.basedir}/lib</url>
         </repository>
-        <repository>
+        <!--<repository>
             <id>MavenCentral</id>
             <name>Maven repository</name>
             <url>http://repo.maven.apache.org/maven2</url>
@@ -23,7 +23,7 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
+        </repository>-->
     </repositories>
 
     <dependencies>
