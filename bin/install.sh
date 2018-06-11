@@ -43,10 +43,10 @@ source "${MY_DIR}/config.sh"
 
 
 sudo apt -y install wget
-sudo apt -y install maven
+#sudo apt -y install maven
 sudo apt -y install tar
 
-mvn package
+#mvn package
 
 DIR_PARS="${SEMAFOR_HOME}/Core_NLP"
 
