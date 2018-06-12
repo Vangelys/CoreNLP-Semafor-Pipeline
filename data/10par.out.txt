@@ -1,0 +1,58 @@
+{"frames":[],"tokens":["Ne","t'","inquiète","pas",",","elle","n'","a","rien","pour","l'","instant","."]}
+{"frames":[],"tokens":["Par","contre",",","dès","que","je","serais","relié","à","le","réseau",",","Florence","ne","sera","plus","."]}
+{"frames":[],"tokens":["Tu","comprends",",","je","ne","peux","pas","laisser","Florence","me","gêner","dans","ma","tâche","."]}
+{"frames":[],"tokens":["Et","puis",",","elle","en","sait","beaucoup","trop","sur","moi","."]}
+{"frames":[],"tokens":["Mais","ils","étaient","beaucoup","plus","rapides","et","plus","grands","."]}
+{"frames":[],"tokens":["Le","peu","de","voitures","qui","circulaient","encore","étaient","ultra","sécurisées","."]}
+{"frames":[],"tokens":["C'","est","pourquoi","la","vitesse","maximum","autorisée","avait","été","portée","à","230","km","/","h.","Les","gens","pouvaient","commencer","à","travailler","à","l'","aide","de","leur","ordinateur","portables","relié","à","le","réseau","par","leur","téléphone","mobile","."]}
+{"frames":[{"target":{"name":"Contacting","spans":[{"start":10,"end":11,"text":"contact"}]},"annotationSets":[{"rank":0,"score":38.01540436615714,"frameElements":[{"name":"Addressee","spans":[{"start":12,"end":15,"text":"restait une priorité"}]}]}]}],"tokens":["Ils","auraient","pu","travailler","de","chez","eux",",","mais","le","contact","humain","restait","une","priorité","."]}
+{"frames":[],"tokens":["Voir","les","collègues",",","prendre","un","café","ensemble","à","midi","et","ce","dire","'","À","demain","'","."]}
+{"frames":[],"tokens":["Telle","était","la","vie","de","l'","homme","\"","moderne","\"","."]}
+{"frames":[],"tokens":["Aujourd’hui",",","c'","est","son","anniversaire","."]}
+{"frames":[],"tokens":["Il","a","vingt-six","ans",",","mais","il","ne","s'","en","souvient","plus","."]}
+{"frames":[{"target":{"name":"Attention","spans":[{"start":4,"end":5,"text":"attention"}]},"annotationSets":[{"rank":0,"score":23.161160858807808,"frameElements":[]}]}],"tokens":["Il","ne","prête","pas","attention","à","ce","genre","de","détails","."]}
+{"frames":[],"tokens":["David","est","un","homme","distrait",",","timide",",","mais","sûr","de","lui","."]}
+{"frames":[],"tokens":["Il","est","grand","et","mince","."]}
+{"frames":[{"target":{"name":"Clothing","spans":[{"start":6,"end":7,"text":"bras"}]},"annotationSets":[{"rank":0,"score":30.180806498060722,"frameElements":[{"name":"Garment","spans":[{"start":6,"end":7,"text":"bras"}]}]}]}],"tokens":["De","grandes","mains","prolongent","ses","longs","bras","."]}
+{"frames":[],"tokens":["Il","lui","serait","possible","de","tenir","deux","bouteilles","de","Champagne","dans","chacune","de","ses","mains",",","mais","il","ne","boit","jamais","."]}
+{"frames":[{"target":{"name":"Cause_to_fragment","spans":[{"start":3,"end":4,"text":"rend"}]},"annotationSets":[{"rank":0,"score":56.707652078501155,"frameElements":[]}]}],"tokens":["L'","alcool","le","rend","malade","et","malheureux",",","voir","dépressif","."]}
+{"frames":[],"tokens":["C'","est","comme","ça","qu'","il","se","voyait","à","cette","époque","."]}
+{"frames":[],"tokens":["Un","peu","rebelle","envers","ce","monde","."]}
+{"frames":[],"tokens":["L'","informatique","l'","avait","aidé","à","s'","enfermer","un","peu","plus","dans","cet","état","."]}
+{"frames":[{"target":{"name":"Organization","spans":[{"start":13,"end":14,"text":"intelligence"}]},"annotationSets":[{"rank":0,"score":33.28542769180589,"frameElements":[{"name":"Organization","spans":[{"start":13,"end":14,"text":"intelligence"}]}]}]}],"tokens":["Il","était","devenu","doué","d'","une","logique","à","toute","épreuve","et","d'","une","intelligence","remarquable",",","mais","surtout",",","il","était","devenu","insociable","."]}
+{"frames":[],"tokens":["Avec","l'","âge",",","le","besoin","de","trouver","l'","âme","sœur","avait","pris","le","dessus","et","il","avait","été","un","peu","obligé","de","rencontrer","des","gens",",","de","parler","avec","eux","."]}
+{"frames":[],"tokens":["Très","difficile","à","le","début",",","il","avait","réussi","à","vaincre","ces","préjugés","."]}
+{"frames":[],"tokens":["Il","avait","accepté","la","lenteur","d'","esprit","des","autres","ainsi","que","leur","manque","de","logique","."]}
+{"frames":[],"tokens":["Il","a","recommencé","et","recommencé","."]}
+{"frames":[],"tokens":["Pratiquement","tous","les","ordinateurs","existants","furent","sous","son","contrôle","."]}
+{"frames":[],"tokens":["Il","ne","laissait","pas","de","trace",",","ne","se","montrait","pas","."]}
+{"frames":[{"target":{"name":"Collaboration","spans":[{"start":7,"end":8,"text":"dialogues"}]},"annotationSets":[{"rank":0,"score":34.51065670002454,"frameElements":[{"name":"Partner_1","spans":[{"start":8,"end":32,"text":"en direct via Internet , le téléphone , la visio-conférence , la domotique ... Le militaire regagna sa voiture et la barrière s' ouvrit"}]}]}]}],"tokens":["Et","puis",",","il","a","découvert","les","dialogues","en","direct","via","Internet",",","le","téléphone",",","la","visio-conférence",",","la","domotique","...","Le","militaire","regagna","sa","voiture","et","la","barrière","s'","ouvrit","."]}
+{"frames":[{"target":{"name":"Locale_by_use","spans":[{"start":7,"end":8,"text":"base"}]},"annotationSets":[{"rank":0,"score":34.86344795242889,"frameElements":[{"name":"Locale","spans":[{"start":7,"end":8,"text":"base"}]}]}]}],"tokens":["David","regardait","autour","de","lui",",","la","base","militaire","où","il","avait","passé","dix","mois","de","sa","vie","."]}
+{"frames":[],"tokens":["Il","n'","y","avait","pas","beaucoup","de","changement","."]}
+{"frames":[],"tokens":["L'","herbe","toujours","aussi","bien","tondue",",","les","allées","toujours","aussi","propres","."]}
+{"frames":[],"tokens":["Les","mêmes","bâtiments","."]}
+{"frames":[],"tokens":["Juste","les","décors","avaient","changés","."]}
+{"frames":[],"tokens":["Il","s'","agissait","de","chars","."]}
+{"frames":[],"tokens":["C'","étaient","les","chars","que","David","avait","eu","l'","occasion","de","voir","fonctionner","et","qui",",","maintenant",",","avaient","remplacés","les","vieux","chars","qui","servaient","de","décors","."]}
+{"frames":[{"target":{"name":"Suitability","spans":[{"start":1,"end":2,"text":"fit"}]},"annotationSets":[{"rank":0,"score":18.573821991314286,"frameElements":[{"name":"Evaluee","spans":[{"start":2,"end":4,"text":"sourire David"}]}]}]}],"tokens":["Cela","fit","sourire","David","."]}
+{"frames":[{"target":{"name":"Roadways","spans":[{"start":1,"end":2,"text":"route"}]},"annotationSets":[{"rank":0,"score":67.19671940382688,"frameElements":[{"name":"Roadway","spans":[{"start":1,"end":2,"text":"route"}]}]}]}],"tokens":["La","route","commença","à","s'","enfoncer","."]}
+{"frames":[],"tokens":["On","ne","voyait","plus","les","grillages","sur","les","cotés",",","mais","juste","des","rochers","."]}
+{"frames":[],"tokens":["Et","soudain",",","les","voitures","s'","arrêtèrent","devant","une","énorme","porte","en","métal","entourée","de","béton","."]}
+{"frames":[],"tokens":["D'","énormes","blocs","de","béton","."]}
+{"frames":[{"target":{"name":"Buildings","spans":[{"start":5,"end":6,"text":"fortifications"}]},"annotationSets":[{"rank":0,"score":43.50937978247562,"frameElements":[{"name":"Building","spans":[{"start":5,"end":6,"text":"fortifications"}]}]}]}],"tokens":["David","avait","visité","d'","anciennes","fortifications","de","la","ligne","Maginot",",","mais","rien","de","semblable","."]}
+{"frames":[],"tokens":["Même","le","Simserhof",",","situé","à","proximité","de","Bitche",",","semblait","petit","à","côté","de","cette","porte","."]}
+{"frames":[{"target":{"name":"Hostile_encounter","spans":[{"start":7,"end":8,"text":"bout"}]},"annotationSets":[{"rank":0,"score":68.96600507243156,"frameElements":[]}]},{"target":{"name":"Experiencer_obj","spans":[{"start":10,"end":11,"text":"surprise"}]},"annotationSets":[{"rank":0,"score":38.7146562625519,"frameElements":[{"name":"Stimulus","spans":[{"start":5,"end":9,"text":"à le bout de"}]}]}]}],"tokens":["Mais","David","n'","était","pas","à","le","bout","de","sa","surprise","."]}
+{"frames":[{"target":{"name":"Gizmo","spans":[{"start":15,"end":16,"text":"machine"}]},"annotationSets":[{"rank":0,"score":15.100559314016959,"frameElements":[]}]}],"tokens":["De","tout","temps",",","l'","homme","a","tenté","de","comprendre","puis","de","reproduire","l'","extraordinaire","machine","qu'","est","l'","être","humain","."]}
+{"frames":[],"tokens":["Les","premiers","automates","nous","font","sourire","aujourd'hui","."]}
+{"frames":[],"tokens":["Les","premiers","ordinateurs","également",",","mais","un","peu","moins","."]}
+{"frames":[{"target":{"name":"Leadership","spans":[{"start":13,"end":14,"text":"premier"}]},"annotationSets":[{"rank":0,"score":55.18904144738174,"frameElements":[{"name":"Leader","spans":[{"start":14,"end":15,"text":"neurone"}]}]}]}],"tokens":["Et","lorsqu'un","certain","McCullogn",",","aidé","de","Pitts",",","invente","en","1943","le","premier","neurone","formel",",","on","ne","rigole","plus","."]}
+{"frames":[],"tokens":["L'","ordinateur","est","devenu","capable","de","reproduire","des","neurones","artificiels","."]}
+{"frames":[],"tokens":["Le","\"","complexe","de","Frankenstein","\"","va","alors","freiner","les","recherches","."]}
+{"frames":[{"target":{"name":"Process_start","spans":[{"start":1,"end":2,"text":"commence"}]},"annotationSets":[{"rank":0,"score":32.8464421560674,"frameElements":[{"name":"Event","spans":[{"start":0,"end":1,"text":"On"}]}]}]}],"tokens":["On","commence","à","entendre","parler","de","le","concept","d'","Intelligence","Artificielle",",","plus","connu","sous","les","termes","d'","IA","."]}
+{"frames":[],"tokens":["Cela","fait","peur","."]}
+{"frames":[],"tokens":["Il","a","recommencé","et","recommencé","."]}
+{"frames":[],"tokens":["Pratiquement","tout","les","ordinateurs","existants","furent","sous","son","contrôle","."]}
+{"frames":[],"tokens":["Il","ne","laissait","pas","de","trace",",","ne","se","montrait","pas","."]}
+{"frames":[{"target":{"name":"Collaboration","spans":[{"start":7,"end":8,"text":"dialogues"}]},"annotationSets":[{"rank":0,"score":34.57330495484131,"frameElements":[{"name":"Partner_1","spans":[{"start":8,"end":37,"text":"en direct via Internet , le téléphone , la visio conférence , la domotique ... D' ailleurs , le Dr. ne savait pas vraiment comment son processeur pouvait fonctionner"}]}]}]}],"tokens":["Et","puis",",","il","a","découvert","les","dialogues","en","direct","via","Internet",",","le","téléphone",",","la","visio","conférence",",","la","domotique","...","D'","ailleurs",",","le","Dr.","ne","savait","pas","vraiment","comment","son","processeur","pouvait","fonctionner","."]}
+{"frames":[{"target":{"name":"Operational_testing","spans":[{"start":13,"end":14,"text":"tests"}]},"annotationSets":[{"rank":0,"score":62.90908507610586,"frameElements":[]}]}],"tokens":["D'","une","architecture","trop","complexe",",","le","Dr.","s'","était","reposé","sur","les","tests","effectués","."]}
+{"frames":[{"target":{"name":"Operational_testing","spans":[{"start":0,"end":1,"text":"Tests"}]},"annotationSets":[{"rank":0,"score":64.26017716132759,"frameElements":[{"name":"Manner","spans":[{"start":1,"end":6,"text":"très légèrement modifiés par Prélude"}]}]}]}],"tokens":["Tests","très","légèrement","modifiés","par","Prélude","afin","de","cacher","certaines","fonctions","de","le","processeur","."]}

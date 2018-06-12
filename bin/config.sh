@@ -24,8 +24,8 @@ export TURBO_MODEL_DIR="${SEMAFOR_HOME}/models/turbo_20130606"
 
 ######################## END ENVIRONMENT VARIABLES #########################
 
-echo "Environment variables:"
-echo "SEMAFOR_HOME=${SEMAFOR_HOME}"
-echo "CLASSPATH=${CLASSPATH}"
-echo "JAVA_HOME_BIN=${JAVA_HOME_BIN}"
-echo "MALT_MODEL_DIR=${MALT_MODEL_DIR}"
+#echo "Environment variables:"
+#echo "SEMAFOR_HOME=${SEMAFOR_HOME}"
+#echo "CLASSPATH=${CLASSPATH}"
+#echo "JAVA_HOME_BIN=${JAVA_HOME_BIN}"
+#echo "MALT_MODEL_DIR=${MALT_MODEL_DIR}"

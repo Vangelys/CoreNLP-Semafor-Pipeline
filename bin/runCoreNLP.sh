@@ -6,10 +6,6 @@ MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 
 source "${MY_DIR}/config.sh"
 
-if [ $# -lt 2 -o $# -gt 2 ]; then
-   echo "USAGE: `basename "${0}"` <input-file> <output-dir>"
-   exit 1
-fi
 
 # location of input file. must be absolute path
 INPUT_FILE="${SEMAFOR_HOME}/data/${1}"
