@@ -10,7 +10,6 @@ export BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." > /dev/null && p
 export SEMAFOR_HOME="${BASE_DIR}/CoreNLP-Semafor-Pipeline"
 
 export CLASSPATH=".:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar"
-#:/home/guilherme/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/guilherme/git_repository/CoreNLP/src/edu/stanford/nlp/process/Morpha.java:${SEMAFOR_HOME}/target/morpha-stemmer-1.0.3.jar:/home/guilherme/.m2/repository/org/pcollections/pcollections/2.1.2/pcollections-2.1.2.jar
 
 # Change the following to the bin directory of your $JAVA_HOME
 export JAVA_HOME_BIN="/usr/bin"
