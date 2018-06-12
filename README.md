@@ -16,7 +16,7 @@ The pipeline is ready !
 
 ## Use
 
-1. Place your document in the folder `data` (this document must be a `.txt`);
+1. Place your document in the folder `data` (this document must be a plain text file);
 
 2. Open a terminal in CoreNLP-Semafor-Pipeline;
 
@@ -30,7 +30,7 @@ The pipeline is ready !
 
 	4. `[language]` = language of the document, with `[a=arabic] [c=chinese] [e=english] [f=french] [g=german] [s=spanish]`. **CAUTION** : the language package must be download before the process, usually during the install.
 
-This process need 2mg of free RAM, else it will not work.
+This process need 2MiB of free RAM, else it will not work.
 
 ## Documentation
 
