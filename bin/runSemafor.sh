@@ -100,6 +100,13 @@ time ${JAVA_HOME_BIN}/java \
 echo "Finished frame-semantic parsing."
 echo "********************************"
 echo
+echo "********************************"
+echo "report generation..."
+cd ${SEMAFOR_HOME}
+time python3 report_generation.py ${INPUT_FILE} ${OUTPUT_FILE}
+echo "Finished report generation"
+echo "********************************"
+echo
 echo
 
 rm -r "${TEMP_DIR}"

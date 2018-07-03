@@ -1,0 +1,88 @@
+Adding annotator tokenize
+Adding annotator ssplit
+Adding annotator pos
+Loading POS tagger from edu/stanford/nlp/models/pos-tagger/french/french-ud.tagger ... done [1.1 sec].
+Adding annotator depparse
+Loading depparse model: edu/stanford/nlp/models/parser/nndep/UD_French.gz ... 
+Loaded TreebankLanguagePack: edu.stanford.nlp.trees.international.french.FrenchTreebankLanguagePack
+PreComputed 100000, Elapsed Time: 17.245 (s)
+Initializing dependency parser ... done [33.5 sec].
+
+Processing file /home/guilherme/git_repository/CoreNLP-Semafor-Pipeline/data/10par.txt ... writing to /home/guilherme/git_repository/CoreNLP-Semafor-Pipeline/bin/tmp/conll/10par.txt.conllu
+Annotating file /home/guilherme/git_repository/CoreNLP-Semafor-Pipeline/data/10par.txt ... done [1.4 sec].
+
+Annotation pipeline timing information:
+TokenizerAnnotator: 0.1 sec.
+WordsToSentencesAnnotator: 0.0 sec.
+POSTaggerAnnotator: 0.2 sec.
+DependencyParseAnnotator: 1.1 sec.
+TOTAL: 1.4 sec. for 253 tokens at 182.5 tokens/sec.
+Pipeline setup: 35.1 sec.
+Total time for StanfordCoreNLP pipeline: 37.0 sec.
+
+real	0m37.943s
+user	0m45.063s
+sys	0m1.103s
+Initializing frame identification model...
+Reading serialized required data
+Done reading serialized required data
+Reading graph from: /home/guilherme/git_repository/CoreNLP-Semafor-Pipeline/models/semafor_malt_model_20121129/sparsegraph.gz...
+Read graph successfully.
+Reading model parameters...
+100000 200000 300000 400000 500000 600000 700000 800000 900000 1000000 1100000 1200000 1300000 1400000 1500000 1600000 1700000 1800000 1900000 2000000 2100000 2200000 2300000 2400000 2500000 2600000 2700000 2800000 2900000 3000000 Done reading model parameters.
+Initializing alphabet for argument identification..
+0 100000 200000 300000 400000 500000 600000 700000 800000 900000 1000000 1100000 1200000 1300000 1400000 1500000 1600000 1700000 1800000 1900000 2000000 2100000 2200000 2300000 2400000 2500000 2600000 2700000 2800000 2900000 3000000 
+parsed sentence 1 in 1772 millis.
+parsed sentence 0 in 1778 millis.
+parsed sentence 3 in 7 millis.
+parsed sentence 4 in 131 millis.
+parsed sentence 5 in 5 millis.
+parsed sentence 6 in 10 millis.
+parsed sentence 7 in 169 millis.
+parsed sentence 8 in 1 millis.
+parsed sentence 9 in 1 millis.
+parsed sentence 10 in 2 millis.
+parsed sentence 11 in 108 millis.
+parsed sentence 2 in 537 millis.
+parsed sentence 12 in 2 millis.
+parsed sentence 13 in 1 millis.
+parsed sentence 14 in 122 millis.
+Done.
+
+real	0m56,342s
+user	1m54,720s
+sys	0m4,058s
+Traceback (most recent call last):
+  File "report_generation.py", line 63, in <module>
+    sent_tokenize_list = text_recovery()
+  File "report_generation.py", line 29, in text_recovery
+    return sent_tokenize(text)
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/__init__.py", line 95, in sent_tokenize
+    return tokenizer.tokenize(text)
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1241, in tokenize
+    return list(self.sentences_from_text(text, realign_boundaries))
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1291, in sentences_from_text
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1281, in span_tokenize
+    for sl in slices:
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1322, in _realign_boundaries
+    for sl1, sl2 in _pair_iter(slices):
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 313, in _pair_iter
+    prev = next(it)
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1297, in _slices_from_text
+    if self.text_contains_sentbreak(context):
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1343, in text_contains_sentbreak
+    for t in self._annotate_tokens(self._tokenize_words(text)):
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 1478, in _annotate_second_pass
+    for t1, t2 in _pair_iter(tokens):
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 313, in _pair_iter
+    prev = next(it)
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 584, in _annotate_first_pass
+    for aug_tok in tokens:
+  File "/usr/local/lib/python2.7/dist-packages/nltk/tokenize/punkt.py", line 550, in _tokenize_words
+    for line in plaintext.split('\n'):
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 15: ordinal not in range(128)
+
+real	0m0,939s
+user	0m0,435s
+sys	0m0,176s

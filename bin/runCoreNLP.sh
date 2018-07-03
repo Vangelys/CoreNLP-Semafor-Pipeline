@@ -21,6 +21,7 @@ echo "**********************************************************************"
 echo "Running CoreNLP...."
 #-props StanfordCoreNLP-arabic.properties
 pushd ${SEMAFOR_HOME}/Core_NLP
+#if [ $LANG == "arabic" ]
 time java -mx2g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLP -props StanfordCoreNLP-${LANG}.properties -file ${INPUT_FILE} -outputDirectory ${TEST_PARSED_FILE} -outputFormat conllu
 echo "Finished running CoreNLP."
 echo "**********************************************************************"

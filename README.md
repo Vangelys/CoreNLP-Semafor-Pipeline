@@ -12,6 +12,8 @@
 
 4. Check environnements variables in `bin/config.sh`;
 
+*The automtic report generation will work only if you have a LaTeX compiler (as TexLive) on your computer.*
+
 The pipeline is ready !
 
 ## Use
@@ -20,11 +22,11 @@ The pipeline is ready !
 
 2. Open a terminal in CoreNLP-Semafor-Pipeline;
 
-3. Run this command :`.bin/Semafor.sh [input] [output] [number of threads] [language]`, with :
+3. Run this command :`./bin/runSemafor.sh [input] [output] [number of threads] [language]`, with :
 	
 	1. `[input]` = name of your document (exemple : `test.txt`);
 
-	2. `[output]` = path and name of your output (exemple : `data/test.out.json`). **CAUTION** : this document must be in `.json` and it must not exist;
+	2. `[output]` = path and name of your output (exemple : `data/test.out.xml`). **CAUTION** : this document must be in `.xml` and it must not exist;
 
 	3. `[number of threads]` = number of threads used in the process, usually at least 2;
 
