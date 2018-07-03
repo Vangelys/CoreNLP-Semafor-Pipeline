@@ -12,7 +12,7 @@
 
 4. Check environnements variables in `bin/config.sh`;
 
-*The automtic report generation will work only if you have a LaTeX compiler (as TexLive) on your computer.*
+*The automatic report generation will work only if you have a LaTeX compiler (as TexLive) on your computer.*
 
 The pipeline is ready !
 
@@ -39,3 +39,5 @@ This process need 2MiB of free RAM, else it will not work.
 Documentation of Stanford Core NLP : click [here](https://stanfordnlp.github.io/CoreNLP/index.html).
 
 Documentation of Semafor : click [here](https://github.com/Noahs-ARK/semafor).
+
+Documentation of PyLateX : click [here](https://jeltef.github.io/PyLaTeX/current/index.html).
