@@ -1,8 +1,10 @@
 import sys
 import json
 import pprint
+import subprocess
 from nltk.tokenize import sent_tokenize
 from pylatex.utils import bold
+from stanfordcorenlp import StanfordCoreNLP
 
 
 def sort_frames(x):
@@ -17,12 +19,14 @@ def sort_frames(x):
 
 
 def text_recovery():
+    doc_path = sys.argv[3] + "/tmp/json/" + sys.argv[1] + ".json"
     text = ""
-    text_file = open("data/" + sys.argv[1], "r")
+    text_file = open(doc_path, "r")
     for line in text_file:
         text = text + line
     text_file.close()
-    return sent_tokenize(text)
+    json_tmp = json.loads(text)
+    return json_tmp
 
 
 def json_recovery():
@@ -32,7 +36,7 @@ def json_recovery():
     for line in json_file:
         if i_tmp == 1:
             json_tmp = '{"data":[' + line + ","
-        elif i_tmp == len(sent_tokenize_list):
+        elif i_tmp == len(json_input['sentences']):
             json_tmp = json_tmp + line + "]}"
         else:
             json_tmp = json_tmp + line + ","
@@ -54,15 +58,33 @@ def stats():
     return nb_frames_rec_tmp, nb_tokens_tmp
 
 
+def md_report():
+    md_report = open('markdown_report_' + sys.argv[1] + '.md', 'w+')
+
+    md_report.write('# Pipeline Report \n')
+
+    md_report.write('## Primary Corpus \n')
+
+    md_report.write('*number of tokens* (words) : ' + str(nb_tokens) + '\n')
+
+    md_report.write('*number of sentences* : ' + str(len(json_input['sentences'])) + '\n')
+
+    md_report.write('*average of tokens per sentence* : ' + str(int(nb_tokens / len(json_input['sentences'])))+'\n')
+
+    md_report.write('## Analysis Report \n')
+
+    md_report.write('*number of recognized frames* : ' + str(nb_frames_rec) + '\n')
+
+
 if __name__ == '__main__':
 
-    try:
+    #try:
 
         from pylatex import Document, Section, LongTable, MiniPage, LargeText, Package
 
         pp = pprint.PrettyPrinter(indent=2, depth=10, compact=True, width=200)
 
-        sent_tokenize_list = text_recovery()
+        json_input = text_recovery()
 
         json_text = json_recovery()
 
@@ -73,6 +95,8 @@ if __name__ == '__main__':
         frames_rec_list = []
 
         nb_frames_rec, nb_tokens = stats()
+
+        md_report()
 
         geometry_options = {"top": "3cm", "left": "3cm", "right": "3cm", "bottom": "3cm", "marginparwidth": "1.75cm"}
         doc = Document(geometry_options=geometry_options)
@@ -85,8 +109,8 @@ if __name__ == '__main__':
         with doc.create(Section('Primary corpus')):
             doc.append('number of tokens (words) : ' + str(nb_tokens))
             doc.append("\nnumber of frames : " + str(nb_frames_rec))
-            doc.append('\nnumber of sentences : ' + str(len(sent_tokenize_list)))
-            doc.append('\naverage of tokens per sentence : ' + str(int(nb_tokens / len(sent_tokenize_list))))
+            doc.append('\nnumber of sentences : ' + str(len(json_input['sentences'])))
+            doc.append('\naverage of tokens per sentence : ' + str(int(nb_tokens / len(json_input['sentences']))))
 
         with doc.create(Section('Data alignment')):
             with doc.create(LongTable("|l |p{5.5cm} |p{9cm}|")) as data_table:
@@ -99,13 +123,17 @@ if __name__ == '__main__':
 
                 data_table.end_table_last_footer()
                 row = ["", "", ""]
-                for i in range(len(sent_tokenize_list)):
-                    row = [str(i + 1), sent_tokenize_list[i], pp.pformat(data[i])]
-                    if data[i] in frames_rec_list:
-                        data_table.add_row(row, color="lightgray")
+                sentence = ""
+                for i in range(len(json_input['sentences'])):
+                    for j in range(len(json_input['sentences'][i]['tokens'])):
+                        sentence += str(json_input['sentences'][i]['tokens'][j]['word']) + ' '
+                    row = [str(i + 1), sentence, pp.pformat(data[i])]
+                    if data[i] not in frames_rec_list:
+                        data_table.add_row(row, color="lightgray!80")
                     else:
                         data_table.add_row(row)
                     data_table.add_hline()
+                    sentence = ""
 
         with doc.create(Section('Frames sorted by score')):
             with doc.create(LongTable("|p{15.5cm}|")) as data_table_tri:
@@ -123,7 +151,9 @@ if __name__ == '__main__':
                     data_table_tri.add_row(row)
                     data_table_tri.add_hline()
 
-        doc.generate_pdf('full', clean_tex=False)
+        doc.generate_pdf('report '+sys.argv[1], clean_tex=False)
 
-    except:
-        print("An error occurred, probably a Latex compiler missed")
+    #except
+
+
+    #print("An error occurred, probably a Latex compiler missed")

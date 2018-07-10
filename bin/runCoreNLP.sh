@@ -16,6 +16,7 @@ OUTPUT_DIR="${2}"
 LANG="${3}"
 
 TEST_PARSED_FILE="${OUTPUT_DIR}/conll"
+ALIGNMENT_FILE="${OUTPUT_DIR}/json"
 
 echo "**********************************************************************"
 echo "Running CoreNLP...."
@@ -23,6 +24,7 @@ echo "Running CoreNLP...."
 pushd ${SEMAFOR_HOME}/Core_NLP
 #if [ $LANG == "arabic" ]
 time java -mx2g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLP -props StanfordCoreNLP-${LANG}.properties -file ${INPUT_FILE} -outputDirectory ${TEST_PARSED_FILE} -outputFormat conllu
+time java -mx2g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLP -props StanfordCoreNLP-${LANG}.properties -annotators tokenize,ssplit -file ${INPUT_FILE} -outputDirectory ${ALIGNMENT_FILE} -outputFormat json
 echo "Finished running CoreNLP."
 echo "**********************************************************************"
 echo

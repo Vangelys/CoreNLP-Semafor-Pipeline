@@ -68,7 +68,7 @@ OUTPUT_FILE="${2}"
 
 NUM_THREADS="${3}"
 
-TEMP_DIR="${MY_DIR}/tmp"
+TEMP_DIR="${SEMAFOR_HOME}/tmp"
 #TEMP_DIR=$(mktemp -d -t semafor.XXXXXXXXXX)
 ######################## END ENVIRONMENT VARIABLES #########################
 
@@ -103,10 +103,10 @@ echo
 echo "********************************"
 echo "report generation..."
 cd ${SEMAFOR_HOME}
-time python3 report_generation.py ${INPUT_FILE} ${OUTPUT_FILE}
+time python3 report_generation.py ${INPUT_FILE} ${OUTPUT_FILE} ${SEMAFOR_HOME}
 echo "Finished report generation"
 echo "********************************"
 echo
 echo
 
-rm -r "${TEMP_DIR}"
+#rm -r "${TEMP_DIR}"
