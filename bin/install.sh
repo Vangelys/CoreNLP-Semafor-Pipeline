@@ -22,6 +22,7 @@ else
 		"e")
 			echo "chosen language = english"
 			URL_PARS="http://nlp.stanford.edu/software/stanford-english-corenlp-2018-02-27-models.jar"
+			URL_PARS_EN="http://nlp.stanford.edu/software/stanford-english-kbp-corenlp-2018-02-27-models.jar"
 			;;
 		"f")
 			echo "chosen language = french"
@@ -52,6 +53,10 @@ DIR_PARS="${SEMAFOR_HOME}/Core_NLP"
 
 pushd $DIR_PARS
 wget $URL_PARS --progress=bar
+if [ $1 != "e" ] 
+then 
+	wget $URL_PARS_EN --progress=bar 
+fi
 
 mkdir -p $SEMAFOR_HOME/models
 DIR_SEM_MOD="${SEMAFOR_HOME}/models"

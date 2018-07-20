@@ -1,10 +1,7 @@
 import sys
 import json
 import pprint
-import subprocess
-from nltk.tokenize import sent_tokenize
 from pylatex.utils import bold
-from stanfordcorenlp import StanfordCoreNLP
 
 
 def sort_frames(x):
@@ -58,6 +55,18 @@ def stats():
     return nb_frames_rec_tmp, nb_tokens_tmp
 
 
+def frame_per_sentence():
+    nb_frames = 0
+    nb_sentence = 0
+    i = 0
+    while i < len(data):
+        if data[i]['frames']:
+            nb_frames += len(data[i]['frames'])
+            nb_sentence += 1
+        i += 1
+    return nb_frames / nb_sentence
+
+
 def md_report():
     md_report = open('markdown_report_' + sys.argv[1] + '.md', 'w+')
 
@@ -69,34 +78,36 @@ def md_report():
 
     md_report.write('*number of sentences* : ' + str(len(json_input['sentences'])) + '\n')
 
-    md_report.write('*average of tokens per sentence* : ' + str(int(nb_tokens / len(json_input['sentences'])))+'\n')
+    md_report.write('*average of tokens per sentence* : ' + str(int(nb_tokens / len(json_input['sentences']))) + '\n')
 
     md_report.write('## Analysis Report \n')
 
-    md_report.write('*number of recognized frames* : ' + str(nb_frames_rec) + '\n')
+    md_report.write('*number of sentences with at least one recognized frame* : ' + str(nb_frames_rec) + '\n')
+
+    md_report.write('*among them, average of frames per sentence* : ' + str(frame_per_sentence()))
 
 
 if __name__ == '__main__':
 
-    #try:
+    json_input = text_recovery()
+
+    json_text = json_recovery()
+
+    data_tmp = json.loads(json_text)
+
+    data = data_tmp['data']
+
+    frames_rec_list = []
+
+    nb_frames_rec, nb_tokens = stats()
+
+    md_report()
+
+    try:
 
         from pylatex import Document, Section, LongTable, MiniPage, LargeText, Package
 
         pp = pprint.PrettyPrinter(indent=2, depth=10, compact=True, width=200)
-
-        json_input = text_recovery()
-
-        json_text = json_recovery()
-
-        data_tmp = json.loads(json_text)
-
-        data = data_tmp['data']
-
-        frames_rec_list = []
-
-        nb_frames_rec, nb_tokens = stats()
-
-        md_report()
 
         geometry_options = {"top": "3cm", "left": "3cm", "right": "3cm", "bottom": "3cm", "marginparwidth": "1.75cm"}
         doc = Document(geometry_options=geometry_options)
@@ -108,9 +119,10 @@ if __name__ == '__main__':
 
         with doc.create(Section('Primary corpus')):
             doc.append('number of tokens (words) : ' + str(nb_tokens))
-            doc.append("\nnumber of frames : " + str(nb_frames_rec))
             doc.append('\nnumber of sentences : ' + str(len(json_input['sentences'])))
             doc.append('\naverage of tokens per sentence : ' + str(int(nb_tokens / len(json_input['sentences']))))
+            doc.append("\nnumber of sentences with at least one recognized frame : " + str(nb_frames_rec))
+            doc.append("\namong them, average of frames per sentence : " + str(frame_per_sentence()))
 
         with doc.create(Section('Data alignment')):
             with doc.create(LongTable("|l |p{5.5cm} |p{9cm}|")) as data_table:
@@ -151,9 +163,11 @@ if __name__ == '__main__':
                     data_table_tri.add_row(row)
                     data_table_tri.add_hline()
 
-        doc.generate_pdf('report '+sys.argv[1], clean_tex=False)
+        doc.generate_pdf('report_' + sys.argv[1], clean_tex=False)
 
-    #except
-
-
-    #print("An error occurred, probably a Latex compiler missed")
+    except UnicodeDecodeError:
+        print("An error occurred, UnicodeDecodeError")
+    except FileNotFoundError:
+        print("An error occurred, probably missing Latex interpreter (FileNotFoundError)")
+    except:
+        print("Unexpected error : ", sys.exc_info()[0])
